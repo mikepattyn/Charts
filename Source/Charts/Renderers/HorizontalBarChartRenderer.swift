@@ -324,7 +324,7 @@ open class HorizontalBarChartRenderer: BarChartRenderer
                 let barData = dataProvider.barData
                 else { return }
 
-            let textAlign = TextAlignment.center
+            let textAlign = NSTextAlignment.center
             
             let valueOffsetPlus: CGFloat = 5.0
             var posOffset: CGFloat
@@ -366,10 +366,10 @@ open class HorizontalBarChartRenderer: BarChartRenderer
                         
                         let y = rect.origin.y + rect.size.height / 2.0
                         
-                        if !viewPortHandler.isInBoundsTop(rect.origin.y)
-                        {
-                            break
-                        }
+                        // if !viewPortHandler.isInBoundsTop(rect.origin.y)
+                        // {
+                        //     break
+                        // }
                         
                         if !viewPortHandler.isInBoundsX(rect.origin.x)
                         {
@@ -564,7 +564,7 @@ open class HorizontalBarChartRenderer: BarChartRenderer
                                 
                                 let drawBelow = (val == 0.0 && negY == 0.0 && posY > 0.0) || val < 0.0
 
-                                let x = transformed[k].x + (drawBelow ? negOffset : posOffset)
+                                let x = buffer.rects[k].origin.x + buffer.rects[k].size.width / 2
                                 let y = rect.origin.y + rect.size.height / 2.0
                                 
                                 if (!viewPortHandler.isInBoundsTop(y))
