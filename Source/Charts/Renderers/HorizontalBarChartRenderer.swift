@@ -446,10 +446,10 @@ open class HorizontalBarChartRenderer: BarChartRenderer
                         // we still draw stacked bars, but there is one non-stacked in between
                         if vals == nil
                         {
-                            if !viewPortHandler.isInBoundsTop(rect.origin.y)
-                            {
-                                break
-                            }
+                            // if !viewPortHandler.isInBoundsTop(rect.origin.y)
+                            // {
+                            //     break
+                            // }
                             
                             if !viewPortHandler.isInBoundsX(rect.origin.x)
                             {
@@ -567,10 +567,10 @@ open class HorizontalBarChartRenderer: BarChartRenderer
                                 let x = buffer.rects[k].origin.x + buffer.rects[k].size.width / 2
                                 let y = rect.origin.y + rect.size.height / 2.0
                                 
-                                if (!viewPortHandler.isInBoundsTop(y))
-                                {
-                                    break
-                                }
+                                // if (!viewPortHandler.isInBoundsTop(y))
+                                // {
+                                //     break
+                                // }
                                 
                                 if (!viewPortHandler.isInBoundsX(x))
                                 {
