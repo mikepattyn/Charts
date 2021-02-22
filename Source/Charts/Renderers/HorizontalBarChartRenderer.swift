@@ -371,10 +371,10 @@ open class HorizontalBarChartRenderer: BarChartRenderer
                             break
                         }
                         
-                        if !viewPortHandler.isInBoundsX(rect.origin.x)
-                        {
-                            continue
-                        }
+                        // if !viewPortHandler.isInBoundsX(rect.origin.x)
+                        // {
+                        //     continue
+                        // }
                         
                         if !viewPortHandler.isInBoundsBottom(rect.origin.y)
                         {
