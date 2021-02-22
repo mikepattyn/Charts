@@ -405,9 +405,11 @@ open class HorizontalBarChartRenderer: BarChartRenderer
                             let rectSizeWidth = rect.size.width
                             let barValue = val
                             var finalXpos = (rectOriginX + rectSizeWidth / 2)
-
+                            var textColor = dataSet.valueTextColorAt(j)
+                            
                             if rectSizeWidth <= 30 {
-                                finalXpos += 20
+                                finalXpos += 40
+                                textColor = NSUIColor(red: CGFloat(46.0), green: CGFloat(41.0), blue: CGFloat(87.0), alpha: 1.0)
                             }
 
                             drawValue(
