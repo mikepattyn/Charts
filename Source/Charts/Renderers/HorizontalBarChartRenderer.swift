@@ -419,7 +419,7 @@ open class HorizontalBarChartRenderer: BarChartRenderer
                                 yPos: y + yOffset,
                                 font: valueFont,
                                 align: textAlign,
-                                color: dataSet.valueTextColorAt(j),
+                                color: textColor,
                                 anchor: CGPoint.zero,
                                 angleRadians: angleRadians)
                         }
