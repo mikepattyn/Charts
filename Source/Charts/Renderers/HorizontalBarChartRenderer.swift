@@ -404,7 +404,7 @@ open class HorizontalBarChartRenderer: BarChartRenderer
                             let rectOriginX = rect.origin.x
                             let rectSizeWidth = rect.size.width
                             let barValue = val
-                            let finalXpos = (rectOriginX + rectSizeWidth / 2)
+                            var finalXpos = (rectOriginX + rectSizeWidth / 2)
 
                             if rectSizeWidth <= 30 {
                                 finalXpos += 20
