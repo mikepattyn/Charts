@@ -405,6 +405,11 @@ open class HorizontalBarChartRenderer: BarChartRenderer
                             let rectSizeWidth = rect.size.width
                             let barValue = val
                             let finalXpos = (rectOriginX + rectSizeWidth / 2)
+
+                            if rectSizeWidth <= 30 {
+                                finalXpos += 20
+                            }
+
                             drawValue(
                                 context: context,
                                 value: valueText,
