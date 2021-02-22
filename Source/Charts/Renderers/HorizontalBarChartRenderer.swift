@@ -404,11 +404,11 @@ open class HorizontalBarChartRenderer: BarChartRenderer
                             let rectOriginX = rect.origin.x
                             let rectSizeWidth = rect.size.width
                             let barValue = val
-
+                            let finalXpos = (rectOriginX + rectSizeWidth / 2) + (barValue >= 0.0 ? (posOffset + -100) : negOffset)
                             drawValue(
                                 context: context,
                                 value: valueText,
-                                xPos: (rectOriginX + rectSizeWidth) + (barValue >= 0.0 ? (posOffset + -100) : negOffset),
+                                xPos: finalXpos,
                                 yPos: y + yOffset,
                                 font: valueFont,
                                 align: textAlign,
