@@ -409,7 +409,7 @@ open class HorizontalBarChartRenderer: BarChartRenderer
                             
                             if rectSizeWidth <= 30 {
                                 finalXpos += 40
-                                textColor = NSUIColor(red: CGFloat(46.0/255.0), green: CGFloat(41.0/255.0), blue: CGFloat(87.0/255.0), alpha: 1.0)
+                                textColor = dataSet.color(atIndex: j)
                             }
 
                             drawValue(
