@@ -265,7 +265,7 @@ open class HorizontalBarChartRenderer: BarChartRenderer
                 context.setFillColor(dataSet.color(atIndex: j).cgColor)
             }
 
-            let bezierPath = UIBezierPath(roundedRect: barRect, byRoundingCorners: [.topRight, .bottomRight], cornerRadius: CGSize(width: 5.0, height: 5.0))
+            let bezierPath = UIBezierPath(roundedRect: barRect, byRoundingCorners: [.topRight, .bottomRight], cornerRadii: CGSize(width: 5.0, height: 5.0))
             context.addPath(bezierPath.cgPath)
             context.drawPath(using: .fill)
 
