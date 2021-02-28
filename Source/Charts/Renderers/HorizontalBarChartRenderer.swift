@@ -264,8 +264,10 @@ open class HorizontalBarChartRenderer: BarChartRenderer
                 // Set the color for the currently drawn value. If the index is out of bounds, reuse colors.
                 context.setFillColor(dataSet.color(atIndex: j).cgColor)
             }
-
-            context.fill(barRect)
+            
+            let bezierPath = UIBezierPath(roundedRect: barRect, byRoundingCorners: [.topRight, .bottomRight], cornerRadius: 5.0)
+            context.addPath(bezierPath.cgPath)
+            context.drawPath(using: .fill)
 
             if drawBorder
             {
