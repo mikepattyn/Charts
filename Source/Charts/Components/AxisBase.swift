@@ -213,7 +213,7 @@ open class AxisBase: ComponentBase
     @objc open var axisRange = Double(0)
     
     /// The minumum number of labels on the axis
-    @objc open var axisMinLabels = Int(2) {
+    @objc open var axisMinLabels = Int(1) {
         didSet { axisMinLabels = axisMinLabels > 0 ? axisMinLabels : oldValue }
     }
     
