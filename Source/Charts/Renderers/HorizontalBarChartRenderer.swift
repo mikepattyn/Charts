@@ -410,7 +410,7 @@ open class HorizontalBarChartRenderer: BarChartRenderer
                             var textColor = dataSet.valueTextColorAt(j)
                             
                             if rectSizeWidth <= 60 {
-                                finalXpos += 65
+                                finalXpos += 60
                                 textColor = dataSet.color(atIndex: j)
                             }
 
